@@ -1,0 +1,238 @@
+.hero3d-studio {
+  position: relative;
+  width: 100%;
+  height: 200vh;
+  overflow: visible;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* New Logo Design */
+.hero3d-studio .logo {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 1;
+  filter: blur(0);
+}
+
+.hero3d-studio .logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.hero3d-studio .logo-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #ffe9d9;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.hero3d-studio .logo-square {
+  width: 35px;
+  height: 35px;
+  background-color: #ffe9d9;
+  transform: rotate(45deg);
+}
+
+.hero3d-studio .logo-triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 35px solid #ffe9d9;
+}
+
+.hero3d-studio .logo-diamond {
+  width: 30px;
+  height: 30px;
+  background-color: #ffe9d9;
+  transform: rotate(45deg);
+}
+
+.hero3d-studio .logo-line {
+  width: 60px;
+  height: 4px;
+  background-color: #ffe9d9;
+  border-radius: 2px;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.hero3d-studio .cubes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200vh;
+  transform-style: preserve-3d;
+  perspective: 10000px;
+  opacity: 1;
+  filter: blur(0);
+}
+
+.hero3d-studio .cube {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+
+  opacity: 0; /* Start invisible */
+}
+
+.hero3d-studio .cube > div {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+  backface-visibility: visible;
+}
+
+.hero3d-studio .front {
+  transform: translateZ(75px);
+}
+.hero3d-studio .back {
+  transform: translateZ(-75px) rotateY(180deg);
+}
+.hero3d-studio .right {
+  transform: translateX(75px) rotateY(90deg);
+}
+.hero3d-studio .left {
+  transform: translateX(-75px) rotateY(-90deg);
+}
+.hero3d-studio .top {
+  transform: translateY(-75px) rotateX(90deg);
+}
+.hero3d-studio .bottom {
+  transform: translateY(75px) rotateX(-90deg);
+}
+
+.hero3d-studio .header-1 {
+  width: 60%;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffe9d9;
+  opacity: 1;
+  filter: blur(0);
+  z-index: 3;
+}
+
+.hero3d-studio .header-1 h1 {
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+.hero3d-studio .header-2 {
+  width: 50%;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  filter: blur(10px);
+  color: #ffe9d9;
+  z-index: 3;
+}
+
+.hero3d-studio .header-2 h2 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.hero3d-studio .header-2 p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 1000px) {
+  .hero3d-studio {
+    height: 180vh;
+  }
+
+  .hero3d-studio .cubes {
+    height: 180vh;
+  }
+
+  .hero3d-studio .logo-container {
+    gap: 15px;
+  }
+
+  .hero3d-studio .logo-circle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero3d-studio .logo-square {
+    width: 28px;
+    height: 28px;
+  }
+
+  .hero3d-studio .logo-triangle {
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-bottom: 28px solid #ffe9d9;
+  }
+
+  .hero3d-studio .logo-diamond {
+    width: 24px;
+    height: 24px;
+  }
+
+  .hero3d-studio .logo-line {
+    width: 48px;
+    height: 3px;
+  }
+
+  .hero3d-studio .header-1 {
+    width: 90%;
+  }
+
+  .hero3d-studio .header-1 h1 {
+    font-size: 3rem;
+  }
+
+  .hero3d-studio .header-2 {
+    width: 85%;
+    top: 60%;
+  }
+
+  .hero3d-studio .header-2 h2 {
+    font-size: 2rem;
+  }
+
+  .hero3d-studio .header-2 p {
+    font-size: 1.1rem;
+  }
+
+  .hero3d-studio .cube,
+  .hero3d-studio .cube > div {
+    width: 90px;
+    height: 90px;
+  }
+}

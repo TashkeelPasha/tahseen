@@ -1,0 +1,13 @@
+.hover-text-effect {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  transition: color 0.3s;
+}
+
+.hover-text-effect span {
+  display: inline-block;
+  transition: filter 0.5s;
+}

@@ -1,0 +1,47 @@
+.hovertext-container {
+  width: 100%;
+  height: 100%;
+  font-family: "Neue Montreal";
+  text-transform: uppercase;
+  background: #e3e3e3;
+  position: relative;
+}
+
+.hovertext-nav,
+.hovertext-footer {
+  position: absolute;
+  padding: 2em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hovertext-footer {
+  bottom: 0;
+}
+
+.hover-item {
+  padding: 2em;
+  cursor: pointer;
+}
+
+.hovertext-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+}
+
+.hovertext-subheader {
+  text-align: center;
+  font-size: 12px;
+}
+
+.placeholder {
+  text-align: center;
+  font-family: "Torwelten";
+  font-size: 80px;
+  color: #000;
+  line-height: 2.25;
+}
